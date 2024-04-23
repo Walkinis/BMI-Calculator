@@ -1,0 +1,25 @@
+# Inputs from the user
+Height = float(input("Enter your height in centimeters: "))
+Weight = float(input("Enter your Weight in Kg: "))
+
+# Converting height to meters (from centimeters)
+Height = Height / 100
+
+# Calculating BMI
+BMI = Weight / (Height * Height)
+
+# Displaying the calculated BMI
+print(f"Your Body Mass Index is: {BMI:.2f}")
+
+# Checking BMI range and providing corresponding messages
+if BMI > 0:
+    if BMI <= 18.5:
+        print("You are underweight")
+    elif BMI <= 25:
+        print("You are Healthy! Good!")
+    elif BMI <= 30:
+        print("You are overweight! Please take measures.")
+    else:
+        print("You are severely overweight, take immediate actions!")
+else:
+    print("Enter valid details!")
